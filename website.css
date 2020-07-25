@@ -1,59 +1,253 @@
-body {
-    font-family: 'Roboto', sans-serif;
-    text-align: justify;
-    font-weight: 400;
-    font-size: 15px;
-    width: 100%;
-    height: 100%;
-    overflow-x: hidden;
-    background-image: url("https://assets.awwwards.com/awards/images/2015/04/pattern.jpg");
+* {
+  font-family: "Poppins", sans-serif;
 }
 
-img {
-    padding: 0px;
+/* Navigation Bar */
+nav {
+  padding: 5px 0 5px 0;
+  top: 0;
+  left: 0;
+  display: flex;
+  position: fixed;
+  justify-content: space-between;
+  align-content: flex-start;
+  color: #666666;
+  height: auto;
+  width: 100%;
+  background-color: #262626;
+  border-bottom: solid 0.5vh #666666;
+  animation-timing-function: ease-in;
+  z-index: 1;
 }
 
-h1 {
-    font-family: 'Kosugi', sans-serif;
-    text-align: left;
-    font-size: 70px;
-    padding-left: 50px;
-    padding-right: 50px;
-    padding-bottom: 30px;
-    padding-top: 50px;
+nav h4 {
+  font-family: "Baloo Da 2", cursive;
+  padding: 1vh 0 0 2vw;
+  margin: 0;
+  font-size: 4vh;
+}
+
+nav a {
+  text-decoration: none;
+  color: #f2f2f2;
+}
+
+nav h4:hover {
+  color: white;
+}
+
+nav ul {
+  font-size: 3vh;
+  margin: 0;
+  display: flex;
+  list-style: none;
+}
+
+nav li a {
+  padding: 2vh 2vw 1.5vh 1vw;
+  display: block;
+}
+
+nav a:hover {
+  color: white;
+}
+
+/* Welcome Section */
+#welcome {
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+  z-index: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation-name: welcome-color;
+  animation-duration: 5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes welcome-color {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    background: linear-gradient(45deg, #99ebff, #ffb3ff);
+  }
+}
+
+#welcome h1 {
+  margin: 0;
+  text-align: center;
+  font-size: 10vh;
+  color: white;
+}
+
+#welcome h3 {
+  margin: 0;
+  text-align: center;
+  font-size: 3vh;
+  color: white;
+}
+
+/* About Section */
+#about {
+  padding: 15vh 0 15vh 0;
+  background-color: white;
+}
+
+.subtitle {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 5vh;
+}
+
+.horizontal {
+  width: 20%;
+  height: 2px;
+  background-color: #bfbfbf;
 }
 
 h2 {
-    font-family: 'Bebas Neue', cursive;
-    letter-spacing: 2px;
-    font-size: 25px;
-    padding-left: 50px;
-    padding-right: 50px;
-    padding-bottom: 30px;
-    text-align: left;
+  margin: 0;
+  padding: 0;
+  font-size: 6vh;
+  text-align: center;
+  color: #4d4d4d;
 }
 
-p {
-    padding-left: 50px;
-    padding-right: 50px;
-    line-height: 40px;
+.aboutcontent {
+  display: flex;
 }
 
-li {
-    list-style-position: inside;
-    padding-left: 50px;
-    line-height: 30px;
+.photo {
+  margin: 20px 2% 0 5%;
+  height: auto;
+  width: auto;
+  min-height: 100px;
+  max-height: 300px;
+  border-radius: 10%;
+  border-color: black;
 }
 
-body .maintext {
-    margin-top: 50px;
-    padding-top: 20px;
-    margin-left: 30px;
-    padding-bottom: 50px;
-    margin-right: 50px;
-    background-color: #f5efef;
+.aboutcontent p {
+  padding: 20px 5% 0 2%;
 }
 
-a {
-    color: darkblue;
+/* Projects Section */
+
+#projects {
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+  background-color: #f8f2ec;
+}
+
+#projects h2 {
+  margin: 0 auto 10vh auto;
+  width: 75%;
+  padding: 5vh 0 1vh 0;
+  border-bottom: solid 2px #4d4d4d;
+}
+
+#projectlist {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+}
+
+#projects a {
+  text-decoration: none;
+}
+
+figure {
+  margin: 0;
+  padding: 0;
+}
+
+#projectlist img {
+  margin-top: 5vh;
+  height: 25vw;
+  width: 40vw;
+  object-fit: cover;
+}
+
+figcaption {
+  margin-bottom: 5vh;
+  padding: 1vh 0 1vh 0;
+  text-align: center;
+  background-color: white;
+  color: #4d4d4d;
+}
+
+/*Contacct Section*/
+#contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 10vh;
+  height: 70vh;
+}
+
+#contact h2 {
+  font-size: 10vh;
+  margin-top: 5vh;
+  padding: 0;
+}
+
+#contact h4 {
+  font-size: 3vh;
+  color: #4d4d4d;
+  text-align: center;
+  padding: 0;
+  margin-top: 0;
+}
+
+.link-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.link-container a {
+  margin-top: 2vh;
+  padding: 3vh 3vw 3vh 3vw;
+}
+
+.link-container a:hover {
+  animation-name: button-colour;
+  animation-duration: 400ms;
+  animation-fill-mode: forwards;
+}
+
+@keyframes button-colour {
+  100% {
+    background-color: #4d4d4d;
+    color: white;
+  }
+}
+
+.contact-link {
+  font-size: 4vh;
+  text-decoration: none;
+  color: #4d4d4d;
+}
+
+#contact i {
+  margin-right: 1vw;
+}
+
+/* Footer */
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 20vh;
+}
+
+footer p {
+  margin-right: 1vw;
+  margin-left: 3vw;
+  font-size: 3vh;
 }
