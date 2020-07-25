@@ -61,7 +61,10 @@ nav a:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(45deg, #99ebff, #ffb3ff);
+  animation-name: welcome-color;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in;
 }
 
 @keyframes welcome-color {
