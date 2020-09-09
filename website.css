@@ -21,8 +21,10 @@ nav {
 
 nav h4 {
   font-family: "Baloo Da 2", cursive;
+  letter-spacing: 5px;
   padding: 1vh 0 0 2vw;
   margin: 0;
+  margin-left: 5px;
   font-size: 4vh;
 }
 
@@ -45,10 +47,12 @@ nav ul {
 nav li a {
   padding: 2vh 2vw 1.5vh 1vw;
   display: block;
+  transition: all 0.5s;
 }
 
 nav a:hover {
   color: white;
+  transform: translateY(5%);
 }
 
 /* Welcome Section */
@@ -61,13 +65,11 @@ nav a:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  animation-name: welcome-color;
-  animation-duration: 1s;
+  animation: fadeIn linear 3s;
   animation-fill-mode: forwards;
-  animation-timing-function: ease-in;
 }
 
-@keyframes welcome-color {
+@keyframes fadeIn {
   0% {
     opacity: 0;
   }
@@ -129,7 +131,7 @@ h2 {
   width: auto;
   min-height: 100px;
   max-height: 300px;
-  border-radius: 10%;
+  border-radius: 10px;
   border-color: black;
 }
 
@@ -138,18 +140,9 @@ h2 {
 }
 
 /* Projects Section */
-
 #projects {
-  padding-top: 10vh;
-  padding-bottom: 10vh;
+  margin: 5vh 0;
   background-color: #f8f2ec;
-}
-
-#projects h2 {
-  margin: 0 auto 10vh auto;
-  width: 75%;
-  padding: 5vh 0 1vh 0;
-  border-bottom: solid 2px #4d4d4d;
 }
 
 #projectlist {
@@ -158,31 +151,70 @@ h2 {
   justify-items: center;
 }
 
+#projects h2 {
+  margin: 0 auto;
+  margin-bottom: 3vh;
+  width: 75%;
+  padding: 5vh 0 1vh 0;
+  border-bottom: solid 2px #4d4d4d;
+}
+
 #projects a {
+  margin: 3vh 0;
   text-decoration: none;
 }
 
 figure {
   margin: 0;
   padding: 0;
+  transition: all 0.3s;
+  opacity: 0.9;
+}
+
+figure:hover {
+  opacity: 1;
 }
 
 #projectlist img {
+  display: block;
   margin-top: 5vh;
   height: 25vw;
   width: 40vw;
   object-fit: cover;
+  transition: all 0.3s;
+}
+
+.project:hover > a > figure > figcaption {
+  transform: translateY(-5px);
 }
 
 figcaption {
   margin-bottom: 5vh;
-  padding: 1vh 0 1vh 0;
+  padding: 1.5vh 0;
   text-align: center;
   background-color: white;
   color: #4d4d4d;
+  transition: all 0.3s;
 }
 
-/*Contacct Section*/
+@media (max-width: 800px) {
+  #projectlist {
+    width: 100%;
+    display: block;
+  }
+
+  .project {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  #projectlist img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/*Contact Section*/
 #contact {
   display: flex;
   flex-direction: column;
@@ -249,5 +281,5 @@ footer {
 footer p {
   margin-right: 1vw;
   margin-left: 3vw;
-  font-size: 3vh;
+  font-size: 2vh;
 }
